@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文档 · 灵卡 Lingka</title>
+  <meta name="description" content="灵卡文档：安装、配置模型、接入飞书、生成第一张卡片、命令行使用、数据与隐私。">
+  <meta name="theme-color" content="#f7f4ee">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="文档 · 灵卡 Lingka">
+  <meta property="og:description" content="从安装到第一张卡：模型配置、飞书接入、命令行与数据说明。">
+  <meta property="og:image" content="https://xiakeming97.github.io/lingka-releases/assets/brand/og-cover.png">
+  <meta property="og:image:width" content="877">
+  <meta property="og:image:height" content="420">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="assets/brand/site.webmanifest">
+  <link rel="canonical" href="https://xiakeming97.github.io/lingka-releases/docs.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://xiakeming97.github.io/lingka-releases/docs.html">
+  <link rel="alternate" hreflang="en" href="https://xiakeming97.github.io/lingka-releases/en/docs.html">
+  <link rel="alternate" hreflang="x-default" href="https://xiakeming97.github.io/lingka-releases/docs.html">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="灵卡 Lingka 首页">
+        <img src="assets/brand/lingka-lockup-black-1200.png" width="1200" height="341" alt="灵卡 Lingka">
+      </a>
+
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="features.html">功能</a>
+        <a href="docs.html" aria-current="page">文档</a>
+        <a href="download.html">下载</a>
+        <a href="faq.html">常见问题</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="lang" href="en/docs.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        <a class="icon-btn" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener" aria-label="在 GitHub 查看灵卡发布页">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-github"/></svg>
+        </a>
+        <a class="btn btn-coral btn-sm header-download" href="download.html">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-download"/></svg>
+          下载灵卡
+        </a>
+        <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="mobile-nav">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="nav-close" type="button" aria-label="关闭导航">
+      <svg aria-hidden="true"><use href="assets/sprite.svg#i-close"/></svg>
+    </button>
+    <a class="mobile-link" href="index.html">首页 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="features.html">功能 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="docs.html" aria-current="page">文档 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="download.html">下载 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="faq.html">常见问题 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <div class="mobile-foot">
+      <a class="btn btn-coral" href="download.html">
+        <svg aria-hidden="true"><use href="assets/sprite.svg#i-download"/></svg>
+        下载灵卡
+      </a>
+      <a class="btn btn-outline" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="assets/sprite.svg#i-github"/></svg>
+        GitHub Releases
+      </a>
+      <a class="mobile-lang" href="en/docs.html" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="dot" aria-hidden="true"><svg><use href="assets/sprite.svg#i-book"/></svg></span>
+          文档
+        </p>
+        <h1 id="page-title">从安装，<br>到第一张卡。</h1>
+        <p class="lead">按顺序做完这几步，你就能在飞书里和灵卡说话。桌面端负责界面和飞书长连接，模型用你自己的 Key。</p>
+      </div>
+    </section>
+
+    <div class="container doc-layout">
+      <aside class="doc-toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">目录</h2>
+        <ol>
+          <li><a href="#install">快速开始</a></li>
+          <li><a href="#model">配置模型</a></li>
+          <li><a href="#feishu">接入飞书</a></li>
+          <li><a href="#first-card">生成第一张卡片</a></li>
+          <li><a href="#cli">命令行使用</a></li>
+          <li><a href="#data">数据与隐私</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body">
+        <section class="doc-section" id="install" aria-labelledby="install-title">
+          <h2 id="install-title">快速开始</h2>
+          <p>灵卡是一个桌面应用。Windows 和 macOS 都有安装包，安装包发布在 GitHub Releases，安装后不需要额外的服务端。</p>
+
+          <h3>系统要求</h3>
+          <ul>
+            <li>Windows 10 / 11，64 位。</li>
+            <li>macOS，Apple 芯片或 Intel 芯片。</li>
+            <li>只用命令行方式时，需要 Node.js 20 或更高版本。</li>
+          </ul>
+
+          <h3>安装</h3>
+          <ol>
+            <li>打开 <a href="download.html">下载页</a>，选择你的系统。</li>
+            <li>下载并运行安装包，按提示完成安装。</li>
+            <li>第一次打开被系统拦截时，按下面说明放行。</li>
+          </ol>
+
+          <div class="callout callout-warn">
+            <span class="callout-mark" aria-hidden="true">!</span>
+            <div>
+              <p><strong>安装包没有购买代码签名证书，也没有做 macOS 公证。</strong>Windows SmartScreen 会先拦一下，点「更多信息 → 仍要运行」；macOS 右键应用选「打开」，或执行下面的命令。</p>
+            </div>
+          </div>
+
+          <div class="code-block">
+            <button class="copy-btn" type="button" data-copy data-copy-label="复制">复制</button>
+            <pre><code>xattr -dr com.apple.quarantine /Applications/灵卡.app</code></pre>
+          </div>
+
+          <p>更完整的安装步骤和更新说明见 <a href="download.html#install">下载页的安装说明</a>。</p>
+        </section>
+
+        <section class="doc-section" id="model" aria-labelledby="model-title">
+          <h2 id="model-title">配置模型</h2>
+          <p>打开「设置 → 模型与凭证」，把模型接上。灵卡不内置额度，使用你自己的 API Key。</p>
+          <ol class="doc-steps">
+            <li>选择 Provider。设置页会列出可用的服务商，包括 OpenAI 兼容接口、Anthropic、DeepSeek、通义千问等，以实际列表为准。</li>
+            <li>选择或填写模型 id。</li>
+            <li>填入对应 Provider 的 API Key。</li>
+            <li>需要时调整思考深度。只有支持 reasoning 的模型会产出思考过程。</li>
+          </ol>
+
+          <div class="callout callout-tip">
+            <span class="callout-mark" aria-hidden="true"><svg><use href="assets/sprite.svg#i-lock"/></svg></span>
+            <div>
+              <p><strong>API Key 加密保存在本机</strong>，不会上传到灵卡自己的服务器。换 Provider 或模型不影响已有会话，下一条消息就会用新配置。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="feishu" aria-labelledby="feishu-title">
+          <h2 id="feishu-title">接入飞书</h2>
+          <p>桌面端通过飞书长连接接收消息和卡片回调，不需要公网地址，也不用自己搭服务。</p>
+          <ol class="doc-steps">
+            <li>打开「设置 → 飞书接入」，扫码连接，按提示确认创建应用。</li>
+            <li>等待连接状态变成「已连接」。</li>
+            <li>到飞书开发者后台 → 事件与回调 → 订阅方式，选择「使用长连接」。</li>
+            <li>订阅 <code>im.message.receive_v1</code> 与 <code>card.action.trigger</code> 两个事件。</li>
+            <li>开通 <code>im:message.p2p_msg:readonly</code> 与 <code>im:message.group_at_msg:readonly</code> 两个权限。</li>
+            <li>私聊发一句「帮我做张卡」验证；再到群里 @ 机器人验证。</li>
+          </ol>
+
+          <div class="callout callout-warn">
+            <span class="callout-mark" aria-hidden="true">!</span>
+            <div>
+              <p><strong>私聊和群 @ 是两个独立权限点。</strong>只开私聊权限时，群里 @ 不会到灵卡这里；反过来也一样。两个权限都开通，两种场景才都能用。</p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <span class="callout-mark" aria-hidden="true">i</span>
+            <div>
+              <p>想让按钮点了有反应，还要在「飞书接入」里打开<strong>卡片回调绑定</strong>。开关对新会话生效，已经建立的会话不会中途接上回调。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="first-card" aria-labelledby="first-title">
+          <h2 id="first-title">生成第一张卡片</h2>
+          <p>在对话里直接描述你想要的卡，不用先想 JSON。下面是几个可以直接用的例子。</p>
+
+          <div class="code-block">
+            <button class="copy-btn" type="button" data-copy data-copy-label="复制">复制</button>
+            <pre><code>把本周的销售数据做一张周报卡：三个指标、两句结论、底部放一个「查看明细」跳转按钮。
+
+做一张新人入职指引卡，按第一天 / 第一周 / 第一个月分三段，每段三条。
+
+做一张服务告警卡：标题写「订单服务延迟」，红色警示，附一条处理建议和两个按钮（重试 / 查看日志）。</code></pre>
+          </div>
+
+          <h3>生成之后</h3>
+          <ol>
+            <li><strong>生成</strong>：先出结构，再补内容。</li>
+            <li><strong>润色</strong>：调版式、文案、图标和按钮样式。</li>
+            <li><strong>lint</strong>：结构、颜色、图标、按钮、链接逐项检查。</li>
+            <li><strong>预览</strong>：桌面和手机两种画布看效果。</li>
+            <li><strong>发送</strong>：发到飞书群或私聊。</li>
+          </ol>
+          <p>lint 不通过时，灵卡会把问题逐条列出来并回去改。发送前还有内容账本校验，防止卡片在最后一刻被静默改写。</p>
+          <p>想自己动结构，用「工坊」的三栏编辑器；也可以直接告诉灵卡改哪一处，它会保留其余部分。</p>
+        </section>
+
+        <section class="doc-section" id="cli" aria-labelledby="cli-title">
+          <h2 id="cli-title">命令行使用</h2>
+          <p>除了桌面端，也可以在项目根目录用命令行跑同一套 Agent。</p>
+
+          <div class="code-block">
+            <button class="copy-btn" type="button" data-copy data-copy-label="复制">复制</button>
+            <pre><code>npm install
+npm run config
+npm run agent</code></pre>
+          </div>
+
+          <ul>
+            <li><code>npm run config</code> 会引导你选择 Provider、模型并写入 API Key。</li>
+            <li><code>npm run agent</code> 打开命令行对话；也可以临时指定模型。</li>
+            <li>依赖只用 npm 安装。Node.js 需要 20 或更高版本。</li>
+          </ul>
+
+          <div class="code-block">
+            <button class="copy-btn" type="button" data-copy data-copy-label="复制">复制</button>
+            <pre><code>npm run agent -- --provider openai --model gpt-5</code></pre>
+          </div>
+
+          <div class="callout">
+            <span class="callout-mark" aria-hidden="true">i</span>
+            <div>
+              <p>命令行不会自动接入飞书回调；卡片回调由桌面端的长连接提供。需要按钮和表单回到对话时，请使用桌面端。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="data" aria-labelledby="data-title">
+          <h2 id="data-title">数据与隐私</h2>
+          <p>会话、设置、记忆和卡片资产都保存在本机的用户目录。</p>
+          <ul>
+            <li>Windows：<code>%APPDATA%</code></li>
+            <li>macOS：<code>~/Library/Application Support</code></li>
+          </ul>
+          <p>覆盖安装和升级不会清掉这些数据。API Key 加密保存在本机；调用模型时，卡片内容会发送给你选择的模型服务商。</p>
+          <div class="callout callout-tip">
+            <span class="callout-mark" aria-hidden="true"><svg><use href="assets/sprite.svg#i-shield"/></svg></span>
+            <div>
+              <p><strong>灵卡不运营中转服务</strong>，也不会把卡片内容另存到第三方。数据的去向只有两个：你的本机，和你选择的模型服务商。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">常见问题</h2>
+          <p>接入没反应、按钮点了没动静、第一次打开被拦截，这些问题都在常见问题页里有答案。</p>
+          <p><a href="faq.html">查看全部常见问题 →</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/brand/lingka-lockup-white-1200.png" width="1200" height="341" alt="灵卡 Lingka">
+          <p>AI 飞书卡片 Agent。灵动生成，温暖呈现。把想法说出来，剩下的交给灵卡。</p>
+          <span class="footer-badge"><svg aria-hidden="true"><use href="assets/sprite.svg#i-spark"/></svg>基于 PI Agent 构建</span>
+        </div>
+
+        <div class="footer-col">
+          <h3>产品</h3>
+          <a href="features.html">功能</a>
+          <a href="download.html">下载</a>
+          <a href="docs.html">文档</a>
+          <a href="faq.html">常见问题</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>资源</h3>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">GitHub Releases</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener">更新日志</a>
+          <a href="download.html#install">安装说明</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>关于</h3>
+          <a href="index.html#features">基于 PI Agent 构建</a>
+          <a href="docs.html#data">数据与隐私</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">联系与反馈</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 灵卡 Lingka · 保留所有权利</span>
+        <a class="footer-lang" href="en/docs.html" hreflang="en" lang="en">English <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

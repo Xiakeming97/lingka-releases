@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lingka · Say it once. Watch your Feishu card take shape.</title>
+  <meta name="description" content="Lingka is an AI agent for Feishu cards. Describe what you need — it generates, polishes, lints and sends the card, then handles button and form callbacks in the same conversation. Windows / macOS, bring your own model key.">
+  <meta name="theme-color" content="#f7f4ee">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lingka · Say it once. Watch your Feishu card take shape.">
+  <meta property="og:description" content="An AI agent for Feishu cards: generate, polish, lint, send, and handle callbacks in the same conversation.">
+  <meta property="og:image" content="https://xiakeming97.github.io/lingka-releases/assets/brand/og-cover.png">
+  <meta property="og:image:width" content="877">
+  <meta property="og:image:height" content="420">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48">
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/brand/site.webmanifest">
+  <link rel="canonical" href="https://xiakeming97.github.io/lingka-releases/en/">
+  <link rel="alternate" hreflang="zh-CN" href="https://xiakeming97.github.io/lingka-releases/">
+  <link rel="alternate" hreflang="en" href="https://xiakeming97.github.io/lingka-releases/en/">
+  <link rel="alternate" hreflang="x-default" href="https://xiakeming97.github.io/lingka-releases/">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Lingka",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS",
+      "description": "AI agent for Feishu cards: generate, polish, lint, send, and handle card callbacks.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+    }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Lingka home">
+        <img src="../assets/brand/lingka-lockup-black-1200.png" width="1200" height="341" alt="Lingka">
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="features.html">Features</a>
+        <a href="docs.html">Docs</a>
+        <a href="download.html">Download</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="lang" href="../index.html" hreflang="zh-CN" lang="zh-CN" aria-label="切换到中文">中文</a>
+        <a class="icon-btn" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener" aria-label="Lingka releases on GitHub">
+          <svg aria-hidden="true"><use href="../assets/sprite.svg#i-github"/></svg>
+        </a>
+        <a class="btn btn-coral btn-sm header-download" href="download.html">
+          <svg aria-hidden="true"><use href="../assets/sprite.svg#i-download"/></svg>
+          Download
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg aria-hidden="true"><use href="../assets/sprite.svg#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="nav-close" type="button" aria-label="Close menu">
+      <svg aria-hidden="true"><use href="../assets/sprite.svg#i-close"/></svg>
+    </button>
+    <a class="mobile-link" href="index.html" aria-current="page">Home <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="features.html">Features <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="docs.html">Docs <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="download.html">Download <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="faq.html">FAQ <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <div class="mobile-foot">
+      <a class="btn btn-coral" href="download.html">
+        <svg aria-hidden="true"><use href="../assets/sprite.svg#i-download"/></svg>
+        Download Lingka
+      </a>
+      <a class="btn btn-outline" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="../assets/sprite.svg#i-github"/></svg>
+        GitHub Releases
+      </a>
+      <a class="mobile-lang" href="../index.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-spark"/></svg></span>
+            Lingka · AI Feishu Card Agent
+          </p>
+          <h1 id="hero-title">Say it once.<br>Watch your Feishu card <span class="mark">take shape</span>.</h1>
+          <p class="hero-lead">
+            Lingka is an AI agent for Feishu cards. Describe what you need — it generates, polishes, lints and sends the card, then handles button and form callbacks in the same conversation. A card isn't an attachment; it's the interface between you and your team.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="download.html">
+              <svg aria-hidden="true"><use href="../assets/sprite.svg#i-download"/></svg>
+              Download Lingka
+            </a>
+            <a class="btn btn-outline" href="#workflow">
+              See how it works
+              <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg>
+            </a>
+          </div>
+          <ul class="hero-meta">
+            <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-monitor"/></svg>Windows / macOS</li>
+            <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-lock"/></svg>Bring your own model key</li>
+            <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check-circle"/></svg>Your data stays local</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <span class="hero-chip chip-sent">
+            <svg aria-hidden="true"><use href="../assets/sprite.svg#i-check-circle"/></svg>
+            Sent to Feishu
+          </span>
+          <span class="hero-chip chip-lint">
+            <svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>
+            Lint passed
+          </span>
+          <figure class="window" style="margin:0">
+            <div class="window-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="window-url">Lingka · Chat</span>
+            </div>
+            <img src="../assets/screens/80-layout-card.png"
+                 width="2019" height="1296"
+                 alt="Lingka desktop chat: a one-line request produces a fully laid out Feishu card">
+          </figure>
+          <figure class="float-card" style="margin:0">
+            <img src="../assets/screens/card-after.png"
+                 width="792" height="785"
+                 alt="A property notice card generated by Lingka, with title, icon, body and action buttons">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="compat" aria-label="Supported platforms">
+      <div class="container compat-inner">
+        <span class="compat-label">It runs where you work</span>
+        <ul class="compat-list">
+          <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-monitor"/></svg>Windows 10 / 11</li>
+          <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-laptop"/></svg>macOS</li>
+          <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-feishu"/></svg>Feishu</li>
+          <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-link"/></svg>Lark</li>
+          <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-plug"/></svg>Feishu long connection</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section why" id="features" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Why Lingka</p>
+            <h2 class="section-title" id="why-title">Not JSON assembled into a card —<br>a card designed like one.</h2>
+          </div>
+          <p class="section-lead">Feishu cards follow real layout rules. Lingka writes them into the generation pipeline and into lint — so the card looks designed before anything else.</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="feature-card" data-reveal>
+            <div class="icon-tile" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-layout"/></svg></div>
+            <h3>Design-aware, not just JSON</h3>
+            <p>Palette, spacing, type, buttons and columns follow rules. Three columns max, three buttons max, colors from 15 families × 11 lightness steps — not arbitrary hex.</p>
+            <span class="mini-tag">Palette · Spacing · Columns</span>
+          </article>
+
+          <article class="feature-card" data-reveal data-reveal-delay="1">
+            <div class="icon-tile" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-shield"/></svg></div>
+            <h3>Lint is a hard gate</h3>
+            <p>Generate → polish → lint → send. No lint, no delivery. A content ledger also blocks silent edits before the card goes out.</p>
+            <span class="mini-tag">Generate → Polish → Lint → Send</span>
+          </article>
+
+          <article class="feature-card" data-reveal data-reveal-delay="2">
+            <div class="icon-tile" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-message"/></svg></div>
+            <h3>Sending is where it starts</h3>
+            <p>Button, form and @ callbacks return through the Feishu long connection. Scheduled cards run on time and keep working like a teammate.</p>
+            <span class="mini-tag">Buttons · Forms · @ mentions</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="assets" aria-labelledby="assets-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Card library</p>
+            <h2 class="section-title" id="assets-title">Every card you send,<br>stays in the library</h2>
+          </div>
+          <p class="section-lead">Forwarded cards, saved conversations, editor drafts — all in one place. Next time you need something similar, start from that card instead of describing the layout again.</p>
+        </div>
+
+        <ul class="cap-grid">
+          <li class="cap-item" data-reveal>
+            <span class="cap-icon" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-feishu"/></svg></span>
+            <div>
+              <h3>Forward a card, it lands in the library</h3>
+              <p>Forward a Feishu card to the Lingka bot and it reads the original card into the library. The “auto-import” switch in the toolbar and the one in settings are the same setting.</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="1">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-sliders"/></svg></span>
+            <div>
+              <h3>Find it by name or tag</h3>
+              <p>Every entry keeps its source, save date and schema version. Filter by name or tag, and see at a glance where the card came from.</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="2">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-spark"/></svg></span>
+            <div>
+              <h3>Ask AI to build from it</h3>
+              <p>Pick a card and choose “Build from this”. It reuses the layout, columns and button placement, and only replaces the content.</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal>
+            <span class="cap-icon" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-pen"/></svg></span>
+            <div>
+              <h3>Edit it right there</h3>
+              <p>Edit fields, polish it, or send it straight to Feishu. You're editing the saved card itself — no need to start over in the chat.</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="1">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-clock"/></svg></span>
+            <div>
+              <h3>Source and version are kept</h3>
+              <p>Each card records its source, save time, schema 2.0 version and card ID. Older 1.0 cards still open for inspection.</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="2">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-lock"/></svg></span>
+            <div>
+              <h3>The library stays on your machine</h3>
+              <p>Cards live in the desktop app's local data directory. No extra cloud service, and no handing company cards to a third party.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section workflow" id="workflow" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Life of a card</p>
+            <h2 class="section-title" id="workflow-title">From one sentence to a card you can click</h2>
+          </div>
+          <p class="section-lead">Every step has a clear output and a clear gate. You can see what it did, and change it before it goes out.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step-num">01</span>
+            <div>
+              <h3>Describe</h3>
+              <p>A sentence, a document, a screenshot — anything can be the starting point. You can also continue from the last card.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal data-reveal-delay="1">
+            <span class="step-num">02</span>
+            <div>
+              <h3>Generate &amp; polish</h3>
+              <p>Design rules are built in. Lingka drafts the structure, then tunes layout, copy and icons until it looks designed.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal data-reveal-delay="2">
+            <span class="step-num">03</span>
+            <div>
+              <h3>Lint</h3>
+              <p>Structure, colors, icons, buttons and links are checked one by one. If something fails, it goes back and fixes it.</p>
+              <span class="step-note"><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>No lint, no send</span>
+            </div>
+          </li>
+          <li class="step" data-reveal data-reveal-delay="3">
+            <span class="step-num">04</span>
+            <div>
+              <h3>Send &amp; respond</h3>
+              <p>Send to a Feishu group or DM. Button and form callbacks return to the same conversation, ready for the next step.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section tour" id="tour" aria-labelledby="tour-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Product tour</p>
+            <h2 class="section-title" id="tour-title">Four screens, one loop</h2>
+          </div>
+          <p class="section-lead">From conversation to studio, from Feishu setup to models — the desktop app lays every step out in the open.</p>
+        </div>
+
+        <div class="tour-tabs" role="tablist" aria-label="Product screens">
+          <button class="tour-tab" id="tab-chat" role="tab" aria-selected="true" aria-controls="panel-chat" tabindex="0">Conversation</button>
+          <button class="tour-tab" id="tab-studio" role="tab" aria-selected="false" aria-controls="panel-studio" tabindex="-1">Studio</button>
+          <button class="tour-tab" id="tab-feishu" role="tab" aria-selected="false" aria-controls="panel-feishu" tabindex="-1">Feishu</button>
+          <button class="tour-tab" id="tab-model" role="tab" aria-selected="false" aria-controls="panel-model" tabindex="-1">Models &amp; keys</button>
+        </div>
+
+        <div class="tour-panel" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" tabindex="0">
+          <div class="tour-copy">
+            <h3>Say what you need, leave the rest to it</h3>
+            <p>The conversation is the main entrance. Lingka first works out what card you need, who it's for and why, then chooses a layout.</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>Multi-turn edits that only touch what you mention</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>References past cards and conversation context</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>Generation, polish and checks are visible, not a black box</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="../assets/screens/01-chat.png" width="2019" height="1296" decoding="async"
+                 alt="Lingka chat screen: session list on the left, AI conversation and card generation on the right">
+          </figure>
+        </div>
+
+        <div class="tour-panel" id="panel-studio" role="tabpanel" aria-labelledby="tab-studio" tabindex="0" hidden>
+          <div class="tour-copy">
+            <h3>Tree, canvas and fields — all at once</h3>
+            <p>The studio takes a card apart. Structure tree on the left, canvas in the middle, fields on the right. Change one and the other two follow.</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>Three views: DSL, standard 2.0 and RAW</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>Edit on the page, preview immediately</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>Desktop and mobile canvases, what you see is what you get</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="../assets/screens/128-studio-editor.png" width="2019" height="1296" decoding="async"
+                 alt="Lingka card studio: three columns with structure tree, card canvas and field editor">
+          </figure>
+        </div>
+
+        <div class="tour-panel" id="panel-feishu" role="tabpanel" aria-labelledby="tab-feishu" tabindex="0" hidden>
+          <div class="tour-copy">
+            <h3>Scan to create an app, callbacks come back over the long connection</h3>
+            <p>No server to run. Scan a QR code to create the Feishu app; the desktop app receives messages and card callbacks over a long connection. No public address to maintain.</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>Guided app creation with permissions and events</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>DMs, groups and topic groups each get their own session scope</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>Button and form callbacks are injected into the conversation</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="../assets/screens/05-feishu.png" width="2019" height="1296" decoding="async"
+                 alt="Lingka Feishu setup screen: app credentials, long-connection status and callback binding">
+          </figure>
+        </div>
+
+        <div class="tour-panel" id="panel-model" role="tabpanel" aria-labelledby="tab-model" tabindex="0" hidden>
+          <div class="tour-copy">
+            <h3>Your key, your model, your pace</h3>
+            <p>Lingka doesn't lock you to a model. Pick a provider, enter a key, choose a model — change it whenever you like. Reasoning depth can be adjusted per session.</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>OpenAI-compatible, Anthropic, DeepSeek and more</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>API keys are encrypted on your machine, never uploaded</li>
+              <li><svg aria-hidden="true"><use href="../assets/sprite.svg#i-check"/></svg>No bundled quota — you pay for what you use</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="../assets/screens/04-settings.png" width="2019" height="1296" decoding="async"
+                 alt="Lingka settings: provider, model id, API key and reasoning depth">
+          </figure>
+        </div>
+
+        <div class="tour-foot">
+          <span class="hint">Screenshots from the real desktop app</span>
+          <a class="text-link" href="features.html">Explore the features <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section showcase" id="showcase" aria-labelledby="showcase-title">
+      <div class="container showcase-grid">
+        <div class="showcase-copy">
+          <p class="kicker">The card itself</p>
+          <h2 id="showcase-title">A card isn't an attachment.<br><em>It's an interface.</em></h2>
+          <p>A card can be a set of metrics, a checklist, an alert or an onboarding guide. It gets opened, filled in and replied to inside Feishu — not downloaded.</p>
+          <ul class="showcase-list">
+            <li><span class="num">1</span>Metrics, columns, buttons, images and charts</li>
+            <li><span class="num">2</span>Desktop / mobile preview, what you see is what you get</li>
+            <li><span class="num">3</span>Dark theme handled automatically</li>
+            <li><span class="num">4</span>Forms, links and callbacks all supported</li>
+          </ul>
+        </div>
+
+        <div class="showcase-visual">
+          <span class="showcase-note note-top"><svg aria-hidden="true"><use href="../assets/sprite.svg#i-monitor"/></svg>Desktop / mobile preview</span>
+          <figure class="showcase-card" style="margin:0">
+            <img src="../assets/screens/card-after.png" width="792" height="785" loading="lazy" decoding="async"
+                 alt="A complete Feishu card: icon title, body copy, metric columns and action buttons">
+          </figure>
+          <span class="showcase-note note-bottom"><svg aria-hidden="true"><use href="../assets/sprite.svg#i-sun"/></svg>Dark theme ready</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section start" id="start" aria-labelledby="start-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Three steps</p>
+            <h2 class="section-title" id="start-title">Three steps to your first card</h2>
+          </div>
+          <p class="section-lead">Installers live on GitHub Releases. Your system will block the first launch once — follow the steps and it behaves like any other desktop app.</p>
+        </div>
+
+        <div class="start-grid">
+          <article class="start-card" data-reveal>
+            <div class="step-label"><span>Step 01</span><span class="big-num">01</span></div>
+            <h3>Install</h3>
+            <p>Installers for Windows 10/11 and macOS. They are not code-signed, so the first launch needs a manual approval.</p>
+            <div class="card-action">
+              <a class="text-link" href="download.html#install">Install steps <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="start-card" data-reveal data-reveal-delay="1">
+            <div class="step-label"><span>Step 02</span><span class="big-num">02</span></div>
+            <h3>Configure a model</h3>
+            <p>Open Settings → Models &amp; keys. Choose a provider, enter your API key and pick a model. Lingka has no bundled quota.</p>
+            <div class="card-action">
+              <a class="text-link" href="docs.html#model">Model setup <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="start-card" data-reveal data-reveal-delay="2">
+            <div class="step-label"><span>Step 03</span><span class="big-num">03</span></div>
+            <h3>Connect Feishu</h3>
+            <p>Scan to create the app, switch the subscription to the long connection, enable message and callback events, then say “make me a card” in a DM.</p>
+            <div class="card-action">
+              <a class="text-link" href="docs.html#feishu">Connection checklist <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-wrap" id="download" aria-labelledby="download-title">
+      <div class="container">
+        <div class="download-band">
+          <img class="download-mark" src="../assets/brand/lingka-symbol-app-icon-512.png" width="512" height="512" alt="" aria-hidden="true">
+          <div class="download-inner">
+            <div>
+              <p class="kicker">Download</p>
+              <h2 id="download-title">Hand the next card<br>to Lingka.</h2>
+              <p>The button downloads the latest installer directly — no detour to GitHub. Older versions, release notes and install steps stay on GitHub Releases.</p>
+            </div>
+            <div class="download-actions">
+              <a class="btn btn-ink" href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener" data-download="windows">
+                <svg aria-hidden="true"><use href="../assets/sprite.svg#i-monitor"/></svg>
+                Windows
+              </a>
+              <a class="btn btn-light" href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener" data-download="mac-arm64">
+                <svg aria-hidden="true"><use href="../assets/sprite.svg#i-laptop"/></svg>
+                macOS · Apple silicon
+              </a>
+              <a class="btn btn-light" href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener" data-download="mac-x64">
+                <svg aria-hidden="true"><use href="../assets/sprite.svg#i-laptop"/></svg>
+                macOS · Intel
+              </a>
+              <p class="download-status" data-download-status role="status" hidden></p>
+              <p class="note">Not sure which chip? Check “Chip” in About This Mac · <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">Release history</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-intro">
+          <p class="kicker">FAQ</p>
+          <h2 class="section-title" id="faq-title">Before you start,<br>you might be wondering</h2>
+          <p class="section-lead">Still stuck? Open an issue on GitHub, or check what has already been fixed in the release notes.</p>
+          <a class="text-link" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+            Visit GitHub
+            <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-up-right"/></svg>
+          </a>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Does Lingka include model credits?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">No. Lingka uses your own API key, with the provider and model chosen in settings. That way you use your own quota and billing, and can switch models at any time.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Where is my data stored?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Sessions, settings, memory and the card library live in your local user directory (<code>%APPDATA%</code> on Windows, <code>~/Library/Application Support</code> on macOS). Reinstalling or upgrading doesn't remove them. When a model is called, card content is sent to the provider you chose.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Why is the first launch blocked?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">The installer isn't code-signed and isn't notarized for macOS, so Windows SmartScreen and macOS Gatekeeper warn once. On Windows choose “More info → Run anyway”; on macOS right-click and Open, or run <code>xattr -dr com.apple.quarantine /Applications/Lingka.app</code>.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Nothing happens when I @ the bot in a group?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Receiving DMs does not mean receiving group @ mentions — they are two separate permissions. In the Feishu developer console, confirm <code>im.message.receive_v1</code> is subscribed and <code>im:message.group_at_msg:readonly</code> is granted. With only the DM permission, group mentions never reach Lingka.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../assets/brand/lingka-lockup-white-1200.png" width="1200" height="341" alt="Lingka">
+          <p>AI agent for Feishu cards. Generated with care, presented warmly. Say what you need and leave the rest to Lingka.</p>
+          <span class="footer-badge"><svg aria-hidden="true"><use href="../assets/sprite.svg#i-spark"/></svg>Built on PI Agent</span>
+        </div>
+
+        <div class="footer-col">
+          <h3>Product</h3>
+          <a href="features.html">Features</a>
+          <a href="download.html">Download</a>
+          <a href="docs.html">Docs</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">GitHub Releases</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener">Release notes</a>
+          <a href="download.html#install">Install guide</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>About</h3>
+          <a href="index.html#features">Built on PI Agent</a>
+          <a href="docs.html#data">Data &amp; privacy</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">Contact &amp; feedback</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Lingka. All rights reserved.</span>
+        <a class="footer-lang" href="../index.html" hreflang="zh-CN" lang="zh-CN">中文 <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

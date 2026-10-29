@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><title>灵卡 Lingka</title><g transform="translate(-45.7 -45.72) scale(1.357)">
+  <title id="title">Lingka symbol - folded card</title>
+  <path fill="#F27059" fill-rule="evenodd"
+    d="M 92 40 H 164 A 52 52 0 0 1 216 92 L 216 148 A 52 52 0 0 1 164 216 L 92 216 A 52 52 0 0 1 40 148 L 40 92 A 52 52 0 0 1 92 40 Z
+       M 128 109 a 19 19 0 1 1 0 38 a 19 19 0 1 1 0 -38 Z"/>
+  <polygon points="216,40 152,40 216,104" fill="#FFC94D"/>
+</g></svg>

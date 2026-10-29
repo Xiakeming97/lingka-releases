@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xiakeming97.github.io/lingka-releases/sitemap.xml

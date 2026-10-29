@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>常见问题 · 灵卡 Lingka</title>
+  <meta name="description" content="灵卡常见问题：模型额度、数据位置、飞书接入、回调、定时任务、更新与源码说明。">
+  <meta name="theme-color" content="#f7f4ee">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="常见问题 · 灵卡 Lingka">
+  <meta property="og:description" content="关于模型、数据、飞书接入、回调、定时任务与更新的常见问题。">
+  <meta property="og:image" content="https://xiakeming97.github.io/lingka-releases/assets/brand/og-cover.png">
+  <meta property="og:image:width" content="877">
+  <meta property="og:image:height" content="420">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="assets/brand/site.webmanifest">
+  <link rel="canonical" href="https://xiakeming97.github.io/lingka-releases/faq.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://xiakeming97.github.io/lingka-releases/faq.html">
+  <link rel="alternate" hreflang="en" href="https://xiakeming97.github.io/lingka-releases/en/faq.html">
+  <link rel="alternate" hreflang="x-default" href="https://xiakeming97.github.io/lingka-releases/faq.html">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="灵卡 Lingka 首页">
+        <img src="assets/brand/lingka-lockup-black-1200.png" width="1200" height="341" alt="灵卡 Lingka">
+      </a>
+
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="features.html">功能</a>
+        <a href="docs.html">文档</a>
+        <a href="download.html">下载</a>
+        <a href="faq.html" aria-current="page">常见问题</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="lang" href="en/faq.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        <a class="icon-btn" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener" aria-label="在 GitHub 查看灵卡发布页">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-github"/></svg>
+        </a>
+        <a class="btn btn-coral btn-sm header-download" href="download.html">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-download"/></svg>
+          下载灵卡
+        </a>
+        <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="mobile-nav">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="nav-close" type="button" aria-label="关闭导航">
+      <svg aria-hidden="true"><use href="assets/sprite.svg#i-close"/></svg>
+    </button>
+    <a class="mobile-link" href="index.html">首页 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="features.html">功能 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="docs.html">文档 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="download.html">下载 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="faq.html" aria-current="page">常见问题 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <div class="mobile-foot">
+      <a class="btn btn-coral" href="download.html">
+        <svg aria-hidden="true"><use href="assets/sprite.svg#i-download"/></svg>
+        下载灵卡
+      </a>
+      <a class="btn btn-outline" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="assets/sprite.svg#i-github"/></svg>
+        GitHub Releases
+      </a>
+      <a class="mobile-lang" href="en/faq.html" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="dot" aria-hidden="true"><svg><use href="assets/sprite.svg#i-message"/></svg></span>
+          常见问题
+        </p>
+        <h1 id="page-title">开始之前，<br>你可能想知道。</h1>
+        <p class="lead">模型、数据、飞书接入、回调、定时任务和更新，按被问到的频率排在下面。</p>
+      </div>
+    </section>
+
+    <section class="section faq-page" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section-title" id="faq-title" hidden>常见问题列表</h2>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>灵卡自带模型额度吗？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">不带。灵卡使用你自己的 API Key，Provider 和模型都在设置里选。这样你可以用自己的额度、自己的计费方式，也可以随时换模型。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>支持哪些模型？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">设置页会列出当前可用的 Provider，包括 OpenAI 兼容接口、Anthropic、DeepSeek、通义千问等，以实际列表为准。选 Provider、填模型 id 和 API Key 即可；支持 reasoning 的模型还能调思考深度。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>数据存在哪里？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">会话、设置、记忆和卡片资产都存在本机用户目录（Windows 的 <code>%APPDATA%</code>、macOS 的 <code>~/Library/Application Support</code>）。覆盖安装和升级不会清掉它们。调用模型时，卡片内容会发送给你选择的模型服务商。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>为什么第一次打开会被系统拦截？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">安装包没有购买代码签名证书，也没有做 macOS 公证，所以 Windows SmartScreen 和 macOS Gatekeeper 会先拦一下。Windows 点「更多信息 → 仍要运行」；macOS 右键打开，或执行 <code>xattr -dr com.apple.quarantine /Applications/灵卡.app</code>。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>怎么接入飞书？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">在桌面端「设置 → 飞书接入」扫码创建应用，然后到飞书开发者后台把订阅方式设为「使用长连接」，订阅消息与卡片回调事件，并开通私聊和群 @ 两个权限。完整步骤见 <a href="docs.html#feishu">文档的接入飞书一节</a>。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>群里 @ 机器人没反应？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">私聊能收不代表群 @ 能收，这是两个独立权限。到飞书开发者后台确认已订阅 <code>im.message.receive_v1</code>，并开通 <code>im:message.group_at_msg:readonly</code>；只开私聊权限时，群里 @ 是不会到灵卡这里的。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>按钮点了没反应？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">先在「设置 → 飞书接入」里确认「卡片回调绑定」已打开。这个开关对新会话生效，已经建立的会话不会中途接上回调，开完开关后新开一个会话再试。如果按钮是跳转类型，则不需要回调绑定，它会直接在客户端打开链接。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>能把卡片发给别人或群吗？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">可以。发到来源会话之外的目标时，灵卡会先给触发这一轮的人发一张确认卡，他点了允许才会真正投递。这道确认不受设置里「发送前确认」开关影响，避免卡片被发到意料之外的地方。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>能定时发卡片吗？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">支持。在对话里描述「每天 9 点发一张站会卡」这样的规则，灵卡会创建定时任务，到点以你的身份发送。补跑规则是「漏跑不补」：错过的这一轮不会在下次启动时补发。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>支持飞书国际版（Lark）吗？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">支持。设置页可以在飞书与 Lark 的 API 域名之间切换；连接方式和权限配置一致，只是应用的租户不同。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>怎么更新？会打断会话吗？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">应用启动时会静默检查版本。有新版本时左上角出现升级箭头，下载完成后由你决定什么时候重启安装，不会自动装。安装过程会重启应用，正在进行的会话建议先等它跑完。</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>源码开源吗？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">源码不公开。安装包、更新记录和反馈都在 <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">lingka-releases</a> 仓库里，下载和更新都从那里取。</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-cta">
+      <div class="container">
+        <div class="page-cta-inner">
+          <div>
+            <p class="kicker">还有问题</p>
+            <h2>没找到答案？到 GitHub Releases 提反馈。</h2>
+            <p>把系统、版本和复现步骤写清楚，会更快定位。</p>
+          </div>
+          <a class="btn btn-ink" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+            到 GitHub 看看
+            <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-up-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/brand/lingka-lockup-white-1200.png" width="1200" height="341" alt="灵卡 Lingka">
+          <p>AI 飞书卡片 Agent。灵动生成，温暖呈现。把想法说出来，剩下的交给灵卡。</p>
+          <span class="footer-badge"><svg aria-hidden="true"><use href="assets/sprite.svg#i-spark"/></svg>基于 PI Agent 构建</span>
+        </div>
+
+        <div class="footer-col">
+          <h3>产品</h3>
+          <a href="features.html">功能</a>
+          <a href="download.html">下载</a>
+          <a href="docs.html">文档</a>
+          <a href="faq.html">常见问题</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>资源</h3>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">GitHub Releases</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener">更新日志</a>
+          <a href="download.html#install">安装说明</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>关于</h3>
+          <a href="index.html#features">基于 PI Agent 构建</a>
+          <a href="docs.html#data">数据与隐私</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">联系与反馈</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 灵卡 Lingka · 保留所有权利</span>
+        <a class="footer-lang" href="en/faq.html" hreflang="en" lang="en">English <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

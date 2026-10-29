@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ · Lingka</title>
+  <meta name="description" content="Lingka FAQ: model quota, data location, Feishu connection, callbacks, scheduled cards, updates and source availability.">
+  <meta name="theme-color" content="#f7f4ee">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQ · Lingka">
+  <meta property="og:description" content="Common questions about models, data, Feishu, callbacks, schedules and updates.">
+  <meta property="og:image" content="https://xiakeming97.github.io/lingka-releases/assets/brand/og-cover.png">
+  <meta property="og:image:width" content="877">
+  <meta property="og:image:height" content="420">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48">
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/brand/site.webmanifest">
+  <link rel="canonical" href="https://xiakeming97.github.io/lingka-releases/en/faq.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://xiakeming97.github.io/lingka-releases/faq.html">
+  <link rel="alternate" hreflang="en" href="https://xiakeming97.github.io/lingka-releases/en/faq.html">
+  <link rel="alternate" hreflang="x-default" href="https://xiakeming97.github.io/lingka-releases/faq.html">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Lingka home">
+        <img src="../assets/brand/lingka-lockup-black-1200.png" width="1200" height="341" alt="Lingka">
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="docs.html">Docs</a>
+        <a href="download.html">Download</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="lang" href="../faq.html" hreflang="zh-CN" lang="zh-CN" aria-label="切换到中文">中文</a>
+        <a class="icon-btn" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener" aria-label="Lingka releases on GitHub">
+          <svg aria-hidden="true"><use href="../assets/sprite.svg#i-github"/></svg>
+        </a>
+        <a class="btn btn-coral btn-sm header-download" href="download.html">
+          <svg aria-hidden="true"><use href="../assets/sprite.svg#i-download"/></svg>
+          Download
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg aria-hidden="true"><use href="../assets/sprite.svg#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="nav-close" type="button" aria-label="Close menu">
+      <svg aria-hidden="true"><use href="../assets/sprite.svg#i-close"/></svg>
+    </button>
+    <a class="mobile-link" href="index.html">Home <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="features.html">Features <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="docs.html">Docs <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="download.html">Download <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="faq.html" aria-current="page">FAQ <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-right"/></svg></a>
+    <div class="mobile-foot">
+      <a class="btn btn-coral" href="download.html">
+        <svg aria-hidden="true"><use href="../assets/sprite.svg#i-download"/></svg>
+        Download Lingka
+      </a>
+      <a class="btn btn-outline" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="../assets/sprite.svg#i-github"/></svg>
+        GitHub Releases
+      </a>
+      <a class="mobile-lang" href="../faq.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="dot" aria-hidden="true"><svg><use href="../assets/sprite.svg#i-message"/></svg></span>
+          FAQ
+        </p>
+        <h1 id="page-title">Before you start,<br>you might be wondering.</h1>
+        <p class="lead">Models, data, the Feishu connection, callbacks, scheduled cards and updates — ordered by how often they come up.</p>
+      </div>
+    </section>
+
+    <section class="section faq-page" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section-title" id="faq-title" hidden>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Does Lingka include model credits?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">No. Lingka uses your own API key, with the provider and model chosen in settings. That way you use your own quota and billing, and can switch models at any time.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Which models are supported?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Settings lists the providers currently available, including OpenAI-compatible endpoints, Anthropic, DeepSeek and Qwen — use whatever the list shows. Choose a provider, enter the model id and API key. Models that support reasoning also expose a thinking-depth setting.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Where is my data stored?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Sessions, settings, memory and the card library live in your local user directory (<code>%APPDATA%</code> on Windows, <code>~/Library/Application Support</code> on macOS). Reinstalling or upgrading keeps them. When a model is called, card content is sent to the provider you chose.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why is the first launch blocked?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">The installer isn't code-signed and isn't notarized for macOS, so Windows SmartScreen and macOS Gatekeeper warn once. On Windows choose “More info → Run anyway”; on macOS right-click and Open, or run <code>xattr -dr com.apple.quarantine /Applications/Lingka.app</code>.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I connect Feishu?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">In the desktop app, go to Settings → Feishu and scan the QR code to create the app. Then set the subscription mode to “Long connection” in the Feishu developer console, subscribe to message and card-callback events, and grant both the DM and group-mention permissions. The full walkthrough is in <a href="docs.html#feishu">the Feishu section of the docs</a>.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Nothing happens when I @ the bot in a group?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Receiving DMs does not mean receiving group @ mentions — they are two separate permissions. In the Feishu developer console, confirm <code>im.message.receive_v1</code> is subscribed and <code>im:message.group_at_msg:readonly</code> is granted. With only the DM permission, group mentions never reach Lingka.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Buttons don't respond when clicked?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">First check that “card callback binding” is on in Settings → Feishu. It only applies to new sessions — existing sessions won't pick up callbacks mid-way, so start a new session after enabling it. Link buttons are the exception: they open in the client without needing callback binding.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I send a card to someone else or to a group?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Yes. When the target is outside the originating conversation, Lingka first sends a confirmation card to the person who triggered the turn; the card is only delivered after they approve. This confirmation is independent of the “confirm before send” setting, so cards can't be delivered somewhere unexpected.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can Lingka send cards on a schedule?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Yes. Describe a rule like “send a standup card every day at 9” and Lingka creates a scheduled task, sending as you. Missed runs are not backfilled — a skipped run won't fire the next time the app starts.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is Lark (international Feishu) supported?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">Yes. Settings lets you switch the API domain between Feishu and Lark. The connection method and permission setup are the same — only the tenant differs.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do updates work? Will they interrupt a session?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">The app checks for versions quietly at startup. When one is available, an update arrow appears in the top-left, and you decide when to restart and install — nothing installs on its own. The installer restarts the app, so let any running session finish first.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is the source code open?<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">No, the source isn't public. Installers, release notes and feedback all live in the <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">lingka-releases</a> repository, which is also where downloads and updates come from.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-cta">
+      <div class="container">
+        <div class="page-cta-inner">
+          <div>
+            <p class="kicker">Still stuck</p>
+            <h2>No answer here? Open an issue on GitHub Releases.</h2>
+            <p>Include your OS, version and reproduction steps — it makes triage much faster.</p>
+          </div>
+          <a class="btn btn-ink" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+            Visit GitHub
+            <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-up-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../assets/brand/lingka-lockup-white-1200.png" width="1200" height="341" alt="Lingka">
+          <p>AI agent for Feishu cards. Generated with care, presented warmly. Say what you need and leave the rest to Lingka.</p>
+          <span class="footer-badge"><svg aria-hidden="true"><use href="../assets/sprite.svg#i-spark"/></svg>Built on PI Agent</span>
+        </div>
+
+        <div class="footer-col">
+          <h3>Product</h3>
+          <a href="features.html">Features</a>
+          <a href="download.html">Download</a>
+          <a href="docs.html">Docs</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">GitHub Releases</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener">Release notes</a>
+          <a href="download.html#install">Install guide</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>About</h3>
+          <a href="index.html#features">Built on PI Agent</a>
+          <a href="docs.html#data">Data &amp; privacy</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">Contact &amp; feedback</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Lingka. All rights reserved.</span>
+        <a class="footer-lang" href="../faq.html" hreflang="zh-CN" lang="zh-CN">中文 <svg aria-hidden="true"><use href="../assets/sprite.svg#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

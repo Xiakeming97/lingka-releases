@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>灵卡 Lingka · 一句话，让飞书卡片自己长出来</title>
+  <meta name="description" content="灵卡是一个飞书卡片 AI Agent：把需求说出来，它负责生成、润色、校验、发送，并把按钮和表单的回调接回对话。Windows / macOS 桌面应用，使用你自己的模型 Key。">
+  <meta name="theme-color" content="#f7f4ee">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="灵卡 Lingka · 一句话，让飞书卡片自己长出来">
+  <meta property="og:description" content="AI 飞书卡片 Agent：生成、润色、lint 校验、发送，并把按钮和表单的回调接回对话。">
+  <meta property="og:image" content="https://xiakeming97.github.io/lingka-releases/assets/brand/og-cover.png">
+  <meta property="og:image:width" content="877">
+  <meta property="og:image:height" content="420">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="assets/brand/site.webmanifest">
+  <link rel="canonical" href="https://xiakeming97.github.io/lingka-releases/">
+  <link rel="alternate" hreflang="zh-CN" href="https://xiakeming97.github.io/lingka-releases/">
+  <link rel="alternate" hreflang="en" href="https://xiakeming97.github.io/lingka-releases/en/">
+  <link rel="alternate" hreflang="x-default" href="https://xiakeming97.github.io/lingka-releases/">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "灵卡 Lingka",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS",
+      "description": "AI 飞书卡片 Agent：生成、润色、lint 校验、发送，并处理卡片回调。",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+    }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="灵卡 Lingka 首页">
+        <img src="assets/brand/lingka-lockup-black-1200.png" width="1200" height="341" alt="灵卡 Lingka">
+      </a>
+
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" aria-current="page">首页</a>
+        <a href="features.html">功能</a>
+        <a href="docs.html">文档</a>
+        <a href="download.html">下载</a>
+        <a href="faq.html">常见问题</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="lang" href="en/index.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        <a class="icon-btn" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener" aria-label="在 GitHub 查看灵卡发布页">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-github"/></svg>
+        </a>
+        <a class="btn btn-coral btn-sm header-download" href="download.html">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-download"/></svg>
+          下载灵卡
+        </a>
+        <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="mobile-nav">
+          <svg aria-hidden="true"><use href="assets/sprite.svg#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="nav-close" type="button" aria-label="关闭导航">
+      <svg aria-hidden="true"><use href="assets/sprite.svg#i-close"/></svg>
+    </button>
+    <a class="mobile-link" href="index.html" aria-current="page">首页 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="features.html">功能 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="docs.html">文档 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="download.html">下载 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <a class="mobile-link" href="faq.html">常见问题 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+    <div class="mobile-foot">
+      <a class="btn btn-coral" href="download.html">
+        <svg aria-hidden="true"><use href="assets/sprite.svg#i-download"/></svg>
+        下载灵卡
+      </a>
+      <a class="btn btn-outline" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="assets/sprite.svg#i-github"/></svg>
+        GitHub Releases
+      </a>
+      <a class="mobile-lang" href="en/index.html" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"><svg><use href="assets/sprite.svg#i-spark"/></svg></span>
+            灵卡 Lingka · 飞书卡片 AI Agent
+          </p>
+          <h1 id="hero-title">一句话，<br>让飞书卡片<br><span class="mark">自己长出来</span>。</h1>
+          <p class="hero-lead">
+            灵卡是一个飞书卡片 AI Agent：你把需求说出来，它负责生成、润色、校验、发送，并把按钮和表单的回调接回同一个对话。卡片不是附件，是你和团队之间的界面。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="#download">
+              <svg aria-hidden="true"><use href="assets/sprite.svg#i-download"/></svg>
+              下载灵卡
+            </a>
+            <a class="btn btn-outline" href="#workflow">
+              看它怎么工作
+              <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg>
+            </a>
+          </div>
+          <ul class="hero-meta">
+            <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-monitor"/></svg>Windows / macOS</li>
+            <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-lock"/></svg>使用你自己的模型 Key</li>
+            <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check-circle"/></svg>数据留在本机</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <span class="hero-chip chip-sent">
+            <svg aria-hidden="true"><use href="assets/sprite.svg#i-check-circle"/></svg>
+            已发送到飞书
+          </span>
+          <span class="hero-chip chip-lint">
+            <svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>
+            lint 通过
+          </span>
+          <figure class="window" style="margin:0">
+            <div class="window-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="window-url">灵卡 · 对话</span>
+            </div>
+            <img src="assets/screens/80-layout-card.png"
+                 width="2019" height="1296"
+                 alt="灵卡桌面端对话界面：用户用一句话描述，灵卡生成了一张排版完整的飞书卡片">
+          </figure>
+          <figure class="float-card" style="margin:0">
+            <img src="assets/screens/card-after.png"
+                 width="792" height="785"
+                 alt="灵卡生成的一张物业通知卡片，包含标题、图标、正文和操作按钮">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 兼容性 -->
+    <section class="compat" aria-label="支持的平台">
+      <div class="container compat-inner">
+        <span class="compat-label">It runs where you work</span>
+        <ul class="compat-list">
+          <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-monitor"/></svg>Windows 10 / 11</li>
+          <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-laptop"/></svg>macOS</li>
+          <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-feishu"/></svg>飞书</li>
+          <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-link"/></svg>Lark</li>
+          <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-plug"/></svg>飞书长连接</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 为什么 -->
+    <section class="section why" id="features" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">为什么是灵卡</p>
+            <h2 class="section-title" id="why-title">不是把 JSON 拼成卡片，<br>而是把卡片当设计来做。</h2>
+          </div>
+          <p class="section-lead">飞书卡片有真实的版式规则。灵卡把它们写进生成链路，也写进 lint——所以卡片先像设计过，再谈生成。</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="feature-card" data-reveal>
+            <div class="icon-tile" aria-hidden="true"><svg><use href="assets/sprite.svg#i-layout"/></svg></div>
+            <h3>懂版式，不只会拼 JSON</h3>
+            <p>色板、间距、字号、按钮和栏数都有规则。最多 3 栏、按钮不超过 3 个，色板来自 15 个色族 × 11 个明度档——不是随手写颜色。</p>
+            <span class="mini-tag">色板 · 间距 · 栏数</span>
+          </article>
+
+          <article class="feature-card" data-reveal data-reveal-delay="1">
+            <div class="icon-tile" aria-hidden="true"><svg><use href="assets/sprite.svg#i-shield"/></svg></div>
+            <h3>lint 是硬门槛</h3>
+            <p>生成 → 润色 → lint → 发送，lint 不通过就发不出去。发送前还有内容账本校验，防止卡片在最后一刻被静默改写。</p>
+            <span class="mini-tag">生成 → 润色 → lint → 发送</span>
+          </article>
+
+          <article class="feature-card" data-reveal data-reveal-delay="2">
+            <div class="icon-tile" aria-hidden="true"><svg><use href="assets/sprite.svg#i-message"/></svg></div>
+            <h3>发出去只是开始</h3>
+            <p>按钮、表单、@ 的回调经飞书长连接回到会话。定时任务到点自动发，像同事一样继续处理，而不是发完就消失。</p>
+            <span class="mini-tag">按钮 · 表单 · @ 回调</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 卡片资产 -->
+    <section class="section" id="assets" aria-labelledby="assets-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">卡片资产</p>
+            <h2 class="section-title" id="assets-title">发过的卡，<br>都留在资产里</h2>
+          </div>
+          <p class="section-lead">转发进来的、对话里存下的、编辑器里保存的，都在同一处。下次要做一张类似的卡，直接拿它当底子，不用从零描述版式。</p>
+        </div>
+
+        <ul class="cap-grid">
+          <li class="cap-item" data-reveal>
+            <span class="cap-icon" aria-hidden="true"><svg><use href="assets/sprite.svg#i-feishu"/></svg></span>
+            <div>
+              <h3>转发一张卡，它就入库</h3>
+              <p>把飞书里的卡片转发给灵卡机器人，它读原始卡片、存进资产库。顶栏的「自动入库」和设置页是同一个开关，关掉就不再收。</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="1">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="assets/sprite.svg#i-sliders"/></svg></span>
+            <div>
+              <h3>按名称或标签找回来</h3>
+              <p>列表带来源、保存日期和 schema 版本，按名称或标签过滤。转发导入、对话收藏、编辑器保存，一眼看出这张卡从哪来。</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="2">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="assets/sprite.svg#i-spark"/></svg></span>
+            <div>
+              <h3>让 AI 照此做卡</h3>
+              <p>选中一张卡点「让 AI 照此做卡」，它会以这张卡为底子换内容重做。版式、分栏、按钮布局都不用重新描述。</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal>
+            <span class="cap-icon" aria-hidden="true"><svg><use href="assets/sprite.svg#i-pen"/></svg></span>
+            <div>
+              <h3>在资产里直接改</h3>
+              <p>编辑字段、一键美化，或者直接发送到飞书。改的就是这张收藏的卡，不用回到对话从头再说一遍。</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="1">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="assets/sprite.svg#i-clock"/></svg></span>
+            <div>
+              <h3>来源与版本都留着</h3>
+              <p>每张卡记着来源、保存时间、schema 2.0 与卡片 ID；1.0 的老卡也能打开查看，不会因为格式升级就被丢掉。</p>
+            </div>
+          </li>
+
+          <li class="cap-item" data-reveal data-reveal-delay="2">
+            <span class="cap-icon" aria-hidden="true"><svg><use href="assets/sprite.svg#i-lock"/></svg></span>
+            <div>
+              <h3>资产留在本机</h3>
+              <p>卡片存在桌面端的本地数据目录里，不需要额外的云服务，也不用把公司卡片交给第三方托管。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 工作方式 -->
+    <section class="section workflow" id="workflow" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">一张卡的一生</p>
+            <h2 class="section-title" id="workflow-title">从一句话，到一张能点的卡</h2>
+          </div>
+          <p class="section-lead">每一步都有明确的产物，也都有明确的闸门。你能看见它做了什么，也能在发出去之前改。</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step-num">01</span>
+            <div>
+              <h3>描述需求</h3>
+              <p>一句话、一段文档、一张截图，都可以是起点。也可以拿上一张卡继续改。</p>
+            </div>
+          </li>
+          <li class="step" data-reveal data-reveal-delay="1">
+            <span class="step-num">02</span>
+            <div>
+              <h3>生成与润色</h3>
+              <p>设计约束内建。灵卡先出结构，再调版式、文案和图标，直到像一张设计过的卡。</p>
+            </div>
+          </li>
+          <li class="step" data-reveal data-reveal-delay="2">
+            <span class="step-num">03</span>
+            <div>
+              <h3>lint 校验</h3>
+              <p>结构、颜色、图标、按钮、链接逐项检查。有错就回去改，不会带着问题发出去。</p>
+              <span class="step-note"><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>lint 通过才允许发送</span>
+            </div>
+          </li>
+          <li class="step" data-reveal data-reveal-delay="3">
+            <span class="step-num">04</span>
+            <div>
+              <h3>发送与回调</h3>
+              <p>发到飞书群或私聊。按钮和表单的回调回到同一个会话，接着处理下一步。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 产品一览 -->
+    <section class="section tour" id="tour" aria-labelledby="tour-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">产品一览</p>
+            <h2 class="section-title" id="tour-title">四个界面，一条闭环</h2>
+          </div>
+          <p class="section-lead">从对话到工坊，从接入到模型，桌面端把每一步都摊开给你看。</p>
+        </div>
+
+        <div class="tour-tabs" role="tablist" aria-label="产品界面">
+          <button class="tour-tab" id="tab-chat" role="tab" aria-selected="true" aria-controls="panel-chat" tabindex="0">对话</button>
+          <button class="tour-tab" id="tab-studio" role="tab" aria-selected="false" aria-controls="panel-studio" tabindex="-1">工坊</button>
+          <button class="tour-tab" id="tab-feishu" role="tab" aria-selected="false" aria-controls="panel-feishu" tabindex="-1">飞书接入</button>
+          <button class="tour-tab" id="tab-model" role="tab" aria-selected="false" aria-controls="panel-model" tabindex="-1">模型与凭证</button>
+        </div>
+
+        <div class="tour-panel" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" tabindex="0">
+          <div class="tour-copy">
+            <h3>把需求说出来，剩下的交给它</h3>
+            <p>对话是主入口。灵卡会先理解你要什么卡、发给谁、为什么发，再决定用哪种版式。</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>多轮修改，改一句不会推倒重来</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>能引用历史卡片和会话上下文</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>生成、润色、校验过程可见，不是黑盒</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/screens/01-chat.png" width="2019" height="1296" decoding="async"
+                 alt="灵卡对话页：左侧会话列表，右侧是AI对话与卡片生成区域">
+          </figure>
+        </div>
+
+        <div class="tour-panel" id="panel-studio" role="tabpanel" aria-labelledby="tab-studio" tabindex="0" hidden>
+          <div class="tour-copy">
+            <h3>结构、画布、字段，三栏同时改</h3>
+            <p>工坊把一张卡拆开给你看。左边是结构树，中间是画布，右边是字段——改哪一处，另外两处跟着动。</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>DSL / 标准 2.0 / RAW 三种视图</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>纸面就地编辑，改完直接预览</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>桌面和手机两种画布，所见即所得</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/screens/128-studio-editor.png" width="2019" height="1296" decoding="async"
+                 alt="灵卡卡片工坊：三栏布局，左侧结构树、中间卡片画布、右侧字段编辑器">
+          </figure>
+        </div>
+
+        <div class="tour-panel" id="panel-feishu" role="tabpanel" aria-labelledby="tab-feishu" tabindex="0" hidden>
+          <div class="tour-copy">
+            <h3>扫码建应用，长连接把回调接回来</h3>
+            <p>不用自己搭服务。扫码创建飞书应用，桌面端用长连接接收消息和卡片回调，断网重连也不用管公网地址。</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>扫码创建应用，权限和事件一步步引导</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>私聊、群聊、话题群，各按各的粒度进会话</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>按钮和表单回调直接注入对话，接着处理</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/screens/05-feishu.png" width="2019" height="1296" decoding="async"
+                 alt="灵卡飞书接入设置页：应用凭证、长连接状态与回调绑定开关">
+          </figure>
+        </div>
+
+        <div class="tour-panel" id="panel-model" role="tabpanel" aria-labelledby="tab-model" tabindex="0" hidden>
+          <div class="tour-copy">
+            <h3>你的 Key，你的模型，你的节奏</h3>
+            <p>灵卡不绑定模型。选 Provider、填 Key、挑模型，想换就换；思考深度也可以按会话调。</p>
+            <ul class="tour-list">
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>OpenAI 兼容、Anthropic、DeepSeek 等多家 Provider</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>API Key 加密保存在本机，不上传</li>
+              <li><svg aria-hidden="true"><use href="assets/sprite.svg#i-check"/></svg>不内置额度，用多少算多少</li>
+            </ul>
+          </div>
+          <figure class="tour-shot" style="margin:0">
+            <div class="tour-shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/screens/04-settings.png" width="2019" height="1296" decoding="async"
+                 alt="灵卡设置页：模型 Provider、模型 id、API Key 与思考深度配置">
+          </figure>
+        </div>
+
+        <div class="tour-foot">
+          <span class="hint">截图来自桌面端真实界面</span>
+          <a class="text-link" href="features.html">看看这些能力 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 卡片展示 -->
+    <section class="section showcase" id="showcase" aria-labelledby="showcase-title">
+      <div class="container showcase-grid">
+        <div class="showcase-copy">
+          <p class="kicker">卡片本身</p>
+          <h2 id="showcase-title">卡片不是附件，<br><em>是界面。</em></h2>
+          <p>一张卡可以是指标、是清单、是告警、是一份入职指引。它在飞书里被点开、被填写、被回复，而不是被下载。</p>
+          <ul class="showcase-list">
+            <li><span class="num">1</span>指标、分栏、按钮、图片与图表</li>
+            <li><span class="num">2</span>桌面 / 手机预览，所见即所得</li>
+            <li><span class="num">3</span>深色主题自动适配</li>
+            <li><span class="num">4</span>表单、跳转、回调都能接</li>
+          </ul>
+        </div>
+
+        <div class="showcase-visual">
+          <span class="showcase-note note-top"><svg aria-hidden="true"><use href="assets/sprite.svg#i-monitor"/></svg>桌面 / 手机预览</span>
+          <figure class="showcase-card" style="margin:0">
+            <img src="assets/screens/card-after.png" width="792" height="785" loading="lazy" decoding="async"
+                 alt="一张完整的飞书卡片：图标标题、正文说明、指标分栏与底部操作按钮">
+          </figure>
+          <span class="showcase-note note-bottom"><svg aria-hidden="true"><use href="assets/sprite.svg#i-sun"/></svg>深色主题已适配</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 三步开始 -->
+    <section class="section start" id="start" aria-labelledby="start-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">三步开始</p>
+            <h2 class="section-title" id="start-title">三步，发出第一张卡</h2>
+          </div>
+          <p class="section-lead">安装包在 GitHub Releases。第一次打开会被系统拦一下，按说明放行即可，之后就是一个普通的桌面应用。</p>
+        </div>
+
+        <div class="start-grid">
+          <article class="start-card" data-reveal>
+            <div class="step-label"><span>Step 01</span><span class="big-num">01</span></div>
+            <h3>下载安装</h3>
+            <p>Windows 10/11 与 macOS 都有安装包。安装包未做代码签名，首次打开需要手动放行。</p>
+            <div class="card-action">
+              <a class="text-link" href="download.html#install">查看安装说明 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="start-card" data-reveal data-reveal-delay="1">
+            <div class="step-label"><span>Step 02</span><span class="big-num">02</span></div>
+            <h3>配置模型</h3>
+            <p>打开「设置 → 模型与凭证」，选 Provider、填 API Key、挑模型。灵卡不内置额度，用你自己的 Key。</p>
+            <div class="card-action">
+              <a class="text-link" href="docs.html#model">看看模型设置 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="start-card" data-reveal data-reveal-delay="2">
+            <div class="step-label"><span>Step 03</span><span class="big-num">03</span></div>
+            <h3>接入飞书</h3>
+            <p>扫码创建应用，在开发者后台打开长连接，订阅消息与卡片回调，然后在私聊里说一句「帮我做张卡」。</p>
+            <div class="card-action">
+              <a class="text-link" href="docs.html#feishu">查看接入要点 <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 下载 -->
+    <section class="download-wrap" id="download" aria-labelledby="download-title">
+      <div class="container">
+        <div class="download-band">
+          <img class="download-mark" src="assets/brand/lingka-symbol-app-icon-512.png" width="512" height="512" alt="" aria-hidden="true">
+          <div class="download-inner">
+            <div>
+              <p class="kicker">下载</p>
+              <h2 id="download-title">把下一张卡片，<br>交给灵卡。</h2>
+              <p>点击按钮即下载最新安装包，不再跳转到 GitHub 页面。历史版本、更新记录与安装说明仍在 GitHub Releases。</p>
+            </div>
+            <div class="download-actions">
+              <a class="btn btn-ink" href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener" data-download="windows">
+                <svg aria-hidden="true"><use href="assets/sprite.svg#i-monitor"/></svg>
+                Windows 版
+              </a>
+              <a class="btn btn-light" href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener" data-download="mac-arm64">
+                <svg aria-hidden="true"><use href="assets/sprite.svg#i-laptop"/></svg>
+                macOS · Apple 芯片
+              </a>
+              <a class="btn btn-light" href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener" data-download="mac-x64">
+                <svg aria-hidden="true"><use href="assets/sprite.svg#i-laptop"/></svg>
+                macOS · Intel 芯片
+              </a>
+              <p class="download-status" data-download-status role="status" hidden></p>
+              <p class="note">不确定芯片？在 macOS 的「关于本机」里看「芯片」一项 · <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">版本记录</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-intro">
+          <p class="kicker">常见问题</p>
+          <h2 class="section-title" id="faq-title">开始之前，<br>你可能想知道</h2>
+          <p class="section-lead">还有别的问题？去 GitHub 提个 Issue，或者先看看更新记录里已经解决了什么。</p>
+          <a class="text-link" href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">
+            到 GitHub 看看
+            <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-up-right"/></svg>
+          </a>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>灵卡自带模型额度吗？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">不带。灵卡使用你自己的 API Key，Provider 和模型都在设置里选。这样你可以用自己的额度、自己的计费方式，也可以随时换模型。</div>
+          </details>
+          <details class="faq-item">
+            <summary>我的数据存在哪里？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">会话、设置、记忆和卡片资产都存在本机用户目录（Windows 的 <code>%APPDATA%</code>、macOS 的 <code>~/Library/Application Support</code>）。覆盖安装和升级不会清掉它们。调用模型时，卡片内容会发送给你选择的模型服务商。</div>
+          </details>
+          <details class="faq-item">
+            <summary>为什么第一次打开会被系统拦截？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">安装包没有购买代码签名证书，也没有做 macOS 公证，所以 Windows SmartScreen 和 macOS Gatekeeper 会先拦一下。Windows 点「更多信息 → 仍要运行」；macOS 右键打开，或执行 <code>xattr -dr com.apple.quarantine /Applications/灵卡.app</code>。</div>
+          </details>
+          <details class="faq-item">
+            <summary>群里 @ 机器人没反应？<span class="faq-plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">私聊能收不代表群 @ 能收，这是两个独立权限。到飞书开发者后台确认已订阅 <code>im.message.receive_v1</code>，并开通 <code>im:message.group_at_msg:readonly</code>；只开私聊权限时，群里 @ 是不会到灵卡这里的。</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/brand/lingka-lockup-white-1200.png" width="1200" height="341" alt="灵卡 Lingka">
+          <p>AI 飞书卡片 Agent。灵动生成，温暖呈现。把想法说出来，剩下的交给灵卡。</p>
+          <span class="footer-badge"><svg aria-hidden="true"><use href="assets/sprite.svg#i-spark"/></svg>基于 PI Agent 构建</span>
+        </div>
+
+        <div class="footer-col">
+          <h3>产品</h3>
+          <a href="features.html">功能</a>
+          <a href="download.html">下载</a>
+          <a href="docs.html">文档</a>
+          <a href="faq.html">常见问题</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>资源</h3>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">GitHub Releases</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases/releases/latest" target="_blank" rel="noopener">更新日志</a>
+          <a href="download.html#install">安装说明</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>关于</h3>
+          <a href="index.html#features">基于 PI Agent 构建</a>
+          <a href="docs.html#data">数据与隐私</a>
+          <a href="https://github.com/Xiakeming97/lingka-releases" target="_blank" rel="noopener">联系与反馈</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 灵卡 Lingka · 保留所有权利</span>
+        <a class="footer-lang" href="en/index.html" hreflang="en" lang="en">English <svg aria-hidden="true"><use href="assets/sprite.svg#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
